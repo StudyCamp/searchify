@@ -1,0 +1,32 @@
+{% extends "searchifyApp/layout.html" %}
+{% load static %}
+
+{% block title %}
+Search Snaps
+{% endblock %}
+
+{% block body %}
+
+{% if not request.user.is_authenticated %}
+<script>
+    window.location.href = '{% url "searchifyApp:login" %}';
+</script>
+{% endif %}
+
+
+<div class="p-4 rounded col-lg-10 mx-auto">
+    <ul class="list-group">
+        <a class="text-decoration-none" href="{% url 'searchifyApp:searchContent' %}">
+            <li class="list-group-item list-group-item-action">
+                Search by Content
+            </li>
+        </a>
+        <a class="text-decoration-none" href="{% url 'searchifyApp:searchTag' %}">
+            <li class="list-group-item list-group-item-action">
+                Search by Tags
+            </li>
+        </a>
+    </ul>
+</div>
+
+{% endblock %}
