@@ -1,1 +1,1 @@
-web: gunicorn searchify:app --log-file -
+web: gunicorn searchify.wsgi --log-file=-
