@@ -11,6 +11,7 @@ The Navbar contains all the features below. Start by registering and logging in.
 ### Searchify App  
 
 #### Functions  
+Location: searchify/searchify/searchifyApp/views.py  
 1. Upload an image, with content, multiple tags, username, and automatic timestamp.  
 2. Store images to a separated location through a configured media root.
 3. Display uploaded images by using the urls stored in the database.    
