@@ -2,7 +2,7 @@
 
 ### Welcome to Searchify!  
 
-This is a backend application developed using Django as a demonstration that allows user to upload, share, and search for images and find other users. 
+This is a backend application developed using Django as a mobile responsive demonstration that allows user to upload, share, and search for images and find other users. 
 
 ### Instructions  
 
