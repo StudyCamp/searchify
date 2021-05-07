@@ -6,21 +6,21 @@ Search Users
 {% endblock %}
 
 {% block body %}
-
+<!-- Send user to login page if not logged in -->
 {% if not request.user.is_authenticated %}
 <script>
     window.location.href = '{% url "searchifyApp:login" %}';
 </script>
 {% endif %}
 
-
 <div class="p-4 rounded col-lg-10 mx-auto">
-    <form method="POST" action="" enctype="multipart/form-data">
+    <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-form-mb-4">Find Users</legend>
+            <!-- Form for searching user profile-->
             <div class="searchForm"> 
-               {{ form }}
+               Username: {{ form.name_user }}
             </div>
             
         </fieldset>

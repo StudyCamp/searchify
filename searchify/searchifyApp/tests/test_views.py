@@ -1,10 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from searchifyApp.models import Post, Tag, User
-from searchifyApp.forms import SnapCreationForm, tagCreationForm, searchForm
+from searchifyApp.forms import SnapCreationForm, tagCreationForm, searchForm, contentSearchForm, findForm
 
 class TestViews(TestCase):
-
+    # Simulate objects and set urls 
     def setUp(self):
         self.client = Client()
         self.index_url = reverse('searchifyApp:index')
@@ -25,7 +25,7 @@ class TestViews(TestCase):
             poster=self.user1,
             image='image2.png',
         )
-
+    # Tests the HTTP response
     def test_index_GET(self):
         response = self.client.get(self.index_url)
         self.assertEquals(response.status_code, 200)
@@ -57,7 +57,7 @@ class TestViews(TestCase):
         response = self.client.get(self.profile_url)
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'searchifyApp/profile.html')
-        
+    # Input and output in Forms
     def test_create_form_(self):
         form = SnapCreationForm(data= {
         'content':'testCreate',
@@ -69,6 +69,24 @@ class TestViews(TestCase):
       
     def test_search_form_(self):
         form = searchForm(data= {
+            'tag':'testTag'
+        })
+        self.assertEqual(form.data["tag"], 'testTag')
+
+    def test_tagCreationForm_form_(self):
+        form = tagCreationForm(data= {
+            'tag':'testTag'
+        })
+        self.assertEqual(form.data["tag"], 'testTag')
+
+    def test_contentSearchForm_form_(self):
+        form = contentSearchForm(data= {
+            'tag':'testTag'
+        })
+        self.assertEqual(form.data["tag"], 'testTag')
+
+    def test_findForm_form_(self):
+        form = findForm(data= {
             'tag':'testTag'
         })
         self.assertEqual(form.data["tag"], 'testTag')

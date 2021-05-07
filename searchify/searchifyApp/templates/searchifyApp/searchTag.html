@@ -13,7 +13,7 @@ Search Snaps
 </script>
 {% endif %}
 
-
+<!-- Form to search by Tags -->
 <div class="p-4 rounded col-lg-10 mx-auto">
     <form method="POST" action="" enctype="multipart/form-data">
         {% csrf_token %}
@@ -21,8 +21,7 @@ Search Snaps
             <legend class="border-form-mb-4">Search</legend>
             <div class="searchForm"> 
                {{ form.as_p }}
-            </div>
-            
+            </div>  
         </fieldset>
         <div class="form-group searchForm">
             <button type="submit" class="btn btn-primary">Post</button>

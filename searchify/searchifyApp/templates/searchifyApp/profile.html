@@ -18,12 +18,14 @@ Profile: {{ profileName }}
 
 {% if request.user.is_authenticated %}
 <div class="instagram">
+    <!-- Display images for this user/profile -->
     {% for post in post_list %}
     <figure class="figure col-3">
         <img src="{{ post.image.url }}" class="figure-img img-fluid rounded" alt="">
         <figcaption class="figure-caption text-right">
             {{ post.content }}
             <span class="photoTag">
+                <!-- Display image's tags -->
                 {% for tag in post.tagged_posts.all %}
                 <a class="photoTagColor text-decoration-none" href="{% url 'searchifyApp:result' tag.tag%}">
                     #{{ tag.tag }}
@@ -39,7 +41,6 @@ Profile: {{ profileName }}
     Don't have an account? <a href="{% url 'searchifyApp:register' %}">Register here.</a></div>
 {% endif %}
 {% endblock %}
-
 
 {% block script %}
 {% endblock %}

@@ -6,14 +6,14 @@ from .forms import SnapCreationForm, tagCreationForm, searchForm, findForm, cont
 
 from .models import User, Post, Tag
 
-
+# Homepage, display all images
 def index(request):
     post_list = Post.objects.all()
     return render(request, "searchifyApp/index.html", {
         'post_list':post_list
     })
 
-
+# Search for users/profiles by sub/string, authentication required
 def find(request):
     if request.method == "POST":
         if not request.user.is_authenticated:
@@ -21,13 +21,14 @@ def find(request):
         else:
             form = findForm(request.POST)
             if form.is_valid():
-                username = form.cleaned_data.get('username')
+                username = form.cleaned_data.get('name_user')
                 return HttpResponseRedirect(reverse('searchifyApp:userlist', kwargs={'username':username}))
             
     return render(request, "searchifyApp/find.html", {
         'form':findForm,
     })
 
+# Display users/profiles containing the case-insensitive substring/search word, auth in template
 def userlist(request, username):
     userlist = User.objects.filter(username__icontains = username)
     return render(request, "searchifyApp/userlist.html", {
@@ -36,6 +37,7 @@ def userlist(request, username):
         'searchName':username
     })
 
+# Display specific user/profile, auth in template
 def profile(request, username):
     try:
         username = User.objects.get(username=username)
@@ -48,7 +50,9 @@ def profile(request, username):
         'profileName':username,
     })
 
+# Display tag-specific images by their tag(s), auth in template
 def result(request, tag):
+    # Separate input string into multiple tags
     tagList=tag.split()
     tagged_posts = Post.objects.filter(tagged_posts__tag__in = tagList)
 
@@ -57,18 +61,20 @@ def result(request, tag):
         'tag':tag
     }) 
 
+# Display content-specific images by case-insensitive content, auth in template
 def contentResult(request, content):
     content_posts = Post.objects.filter(content__icontains = content)
-
     return render(request, "searchifyApp/contentResult.html", {
         'post_list':content_posts,
         'content':content
     })                       
 
+# Display search options, auth in template
 def search(request):
     return render(request, "searchifyApp/search.html", {
     })
 
+# Search for images by tag(s), authentication required
 def searchTag(request):
     if request.method == "POST":
         if not request.user.is_authenticated:
@@ -83,6 +89,7 @@ def searchTag(request):
         'form':searchForm,
     })
 
+# Search for images by case-insensitive content/text, authentication required
 def searchContent(request):
     if request.method == "POST":
         if not request.user.is_authenticated:
@@ -97,6 +104,7 @@ def searchContent(request):
         'form':contentSearchForm,
     })
 
+# Creating image with content and tags, authentication required
 def create(request):
     if request.method == "POST":
         # Authentication check
@@ -113,6 +121,7 @@ def create(request):
                 form.save()
                 # Split by whitespace and store in DB
                 tagArray = tagValues.split()
+                # Add tag relations to the image
                 for tagValue in tagArray:
                     # If tag doesn't already exists, then create.
                     newTag = Tag.objects.get_or_create(tag=tagValue)

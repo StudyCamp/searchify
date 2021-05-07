@@ -4,6 +4,7 @@
 .instagram {
     text-align: center;
 }
+/* Add a bit of flavour to the navbar :) */
 .navbar {
     background: linear-gradient(135deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 0%, rgba(255,255,255,0) 0%, rgba(176,251,255,0.21332282913165268) 82%);
 }

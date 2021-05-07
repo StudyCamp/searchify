@@ -10,12 +10,14 @@ User List
 {% if request.user.is_authenticated %}
 <div class="instagram">
     <ul class="list-group">
+        <!-- Display the input from user -->
         <h2 class="resultHeader">Search Results: {{ searchName }}</h2>
-    {% for user in userlist %}
-
-    <a href="{% url 'searchifyApp:profile' user %}"><li class="list-group-item">{{ user }}</li></a>
-
-    {% endfor %}
+        <!-- Display a list of found users -->
+        {% for user in userlist %}
+        <a href="{% url 'searchifyApp:profile' user %}" class="text-decoration-none">
+            <li class="list-group-item">{{ user }}</li>
+        </a>
+        {% endfor %}
     </ul>
 </div>
 {% else %}
@@ -23,7 +25,6 @@ User List
     Don't have an account? <a href="{% url 'searchifyApp:register' %}">Register here.</a></div>
 {% endif %}
 {% endblock %}
-
 
 {% block script %}
 {% endblock %}
