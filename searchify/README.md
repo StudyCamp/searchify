@@ -4,7 +4,7 @@
 
 This is a backend application developed using Django as a demonstration that allows user to upload, share, and search for images and find other users. 
 
-#### Instructions  
+### Instructions  
 
 The Navbar contains all the features below. Start by registering and logging in. Then you may upload, share, and search for images and user profiles. Enjoy!   
 
