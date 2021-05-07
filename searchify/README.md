@@ -10,7 +10,6 @@ The Navbar contains all the features below. Start by registering and logging in.
 
 ### Searchify App  
 
-
 #### Functions  
 Location: searchify/searchify/searchifyApp/views.py  
 1. Upload an image, with content, multiple tags, username, and automatic timestamp.  
