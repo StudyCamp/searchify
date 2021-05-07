@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 
 import os
 
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-&vibskgdekzl$jn5agwb+-)4o%+0&dfkv^=@gxhltl15j$4hb!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -135,3 +136,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'searchifyApp/static/searchifyApp')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+django_heroku.settings(locals())
