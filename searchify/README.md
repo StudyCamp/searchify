@@ -2,7 +2,7 @@
 
 ### Welcome to Searchify!  
 
-This is a backend application developed using Django as a mobile responsive demonstration that allows user to upload, share, and search for images and find other users. 
+This is a backend application developed using Django as a demonstration that allows user to upload, share, and search for images and find other users. 
 
 ### Instructions  
 
@@ -36,7 +36,7 @@ Location: searchify/searchify/searchifyApp/tests
 #### Static  
 - Images folder contains upload images. 
 - Simulate a cloud service like S3 for demonstration purposes (dev-local).  
-- CSS file.  
+- Mobile responsive CSS.  
 
 #### Template  
 - html files, using Django Template Language.  
