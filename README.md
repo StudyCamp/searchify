@@ -36,7 +36,7 @@ Location: searchify/searchify/searchifyApp/tests
 #### Static  
 - Images folder contains upload images. 
 - Simulate a cloud service like S3 for demonstration purposes (dev-local).  
-- CSS.  
+- CSS style.  
 
 #### Template  
 - HTML, using Django Template Language.  
