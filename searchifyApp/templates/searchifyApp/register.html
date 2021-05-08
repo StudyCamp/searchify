@@ -1,7 +1,7 @@
 {% extends "searchifyApp/layout.html" %}
 
 {% block body %}
-
+<div class='registerDiv'>
     <h2>Register</h2>
 
     {% if message %}
@@ -26,5 +26,5 @@
     </form>
     <!-- Login link -->
     Already have an account? <a href="{% url 'searchifyApp:login' %}">Log In here.</a>
-
+</div>
 {% endblock %}

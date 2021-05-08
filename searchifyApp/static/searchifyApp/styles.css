@@ -41,3 +41,8 @@
 .photoTagColor, .photoTagColor:hover {
     color: rgb(148, 177, 230);
 }
+
+.loginDiv, .registerDiv {
+    margin-left: 1%;
+    margin-right: 1%;
+}
