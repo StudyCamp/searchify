@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # Collectstatic uses - heroku
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # Collectstatic uses - heroku
 
 ROOT_URLCONF = 'searchify.urls'
 
