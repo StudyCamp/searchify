@@ -127,8 +127,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-# Collectstatic uses - heroku configurations
-STATIC_ROOT = os.path.join(BASE_DIR, 'searchifyApp/static/searchifyApp')
+# Collectstatic uses - heroku
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 MEDIA_URL = '/images/'
@@ -139,7 +139,7 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' # Collectstatic uses - heroku
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'searchifyApp/static/searchifyApp')
+MEDIA_ROOT = os.path.join(BASE_DIR, '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
