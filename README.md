@@ -33,7 +33,7 @@ Location: searchify/searchify/searchifyApp/tests
 #### URL  
 - Allow direct access to profile and search results pages through URLs (permission required). 
 
-#### Static  
+#### Staticfiles  
 - Images folder contains upload images. 
 - Simulate a cloud service like S3 for demonstration purposes (dev-local).  
 - CSS style.  
