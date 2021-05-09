@@ -54,5 +54,5 @@ Location: searchify/searchify/searchifyApp/tests
 #### requirements.txt  
 - Include dependencies.  
 
-#### Introduction Video
-- https://www.youtube.com/watch?v=NlmfvrSX0b0
+#### Introduction Video  
+- https://www.youtube.com/watch?v=NlmfvrSX0b0  
