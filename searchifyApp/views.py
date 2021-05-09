@@ -44,7 +44,7 @@ def profile(request, username):
         username = User.objects.get(username=username)
     except User.DoesNotExist:
         raise Http404("Profile not found.")
-    user_post_list = Post.objects.filter(poster__username=username)
+    user_post_list = Post.objects.filter(poster__username=username).order_by('-id')
 
     return render(request, "searchifyApp/profile.html", {
         'post_list':user_post_list,
@@ -55,7 +55,7 @@ def profile(request, username):
 def result(request, tag):
     # Separate input string into multiple tags
     tagList=tag.split()
-    tagged_posts = Post.objects.filter(tagged_posts__tag__in = tagList)
+    tagged_posts = Post.objects.filter(tagged_posts__tag__in = tagList).order_by('-id')
 
     return render(request, "searchifyApp/result.html", {
         'post_list':tagged_posts,
@@ -64,7 +64,7 @@ def result(request, tag):
 
 # Display content-specific images by case-insensitive content, auth in template
 def contentResult(request, content):
-    content_posts = Post.objects.filter(content__icontains = content)
+    content_posts = Post.objects.filter(content__icontains = content).order_by('-id')
     return render(request, "searchifyApp/contentResult.html", {
         'post_list':content_posts,
         'content':content
