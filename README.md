@@ -53,4 +53,3 @@ Location: searchify/searchify/searchifyApp/tests
 
 #### requirements.txt  
 - Include dependencies.  
-
