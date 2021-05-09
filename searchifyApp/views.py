@@ -8,7 +8,7 @@ from .models import User, Post, Tag
 
 # Homepage, display all images
 def index(request):
-    post_list = Post.objects.all().reverse()
+    post_list = Post.objects.all()
     return render(request, "searchifyApp/index.html", {
         'post_list':post_list
     })
