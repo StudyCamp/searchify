@@ -54,4 +54,5 @@ Location: searchify/searchify/searchifyApp/tests
 #### requirements.txt  
 - Include dependencies.  
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/NlmfvrSX0b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#### Introudction Video
+- https://www.youtube.com/watch?v=NlmfvrSX0b0
