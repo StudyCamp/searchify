@@ -145,6 +145,16 @@ Searchify
     <!-- Initial demo image ends -->
 
 </div>
+<br><hr>
+<p id='extra'>
+        As a demonstration, the media/static root that stores the images are in a separate location, 
+        static/images, simulating cloud services like Amazon S3. The Heroku filesystem used here is 
+        ephemeral however - hat means images uploaded will only last 24hours after being uploaded, 
+        therefore the first 7 posts are hard coded for visual and demonstration purposes and will not 
+        be searchable. Otherwise, feel free to register an account, upload, share, and searchify!
+</p>
+
+
 {% endblock %}
 
 {% block script %}
