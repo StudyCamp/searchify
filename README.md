@@ -52,7 +52,20 @@ Location: searchify/searchify/searchifyApp/tests
 - Utilize virtual environment.  
 
 #### requirements.txt  
+<<<<<<< HEAD
 - Include dependencies.  
 
 #### Introduction Video  
 - https://www.youtube.com/watch?v=NlmfvrSX0b0  
+=======
+<<<<<<< HEAD
+- Include dependencies.  
+=======
+<<<<<<< HEAD
+- Include dependencies.  
+=======
+- Include dependencies.  
+
+>>>>>>> master
+>>>>>>> main
+>>>>>>> origin/master
