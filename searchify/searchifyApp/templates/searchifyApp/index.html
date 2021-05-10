@@ -33,6 +33,117 @@ Searchify
         </figcaption>
     </figure>
     {% endfor %}
+
+
+    <!-- As a demonstration, the media/static root that stores the images are in a separate location, 
+        static/images, simulating cloud services like Amazon S3. The Heroku filesystem used here is 
+        ephemeral however - hat means images uploaded will only last 24hours after being uploaded, 
+        therefore the first 7 posts are hard coded for visual and demonstration purposes and will not 
+        be searchable. Otherwise, feel free to register an account, upload, share, and searchify! -->
+
+    <!-- Display all images -->   
+    <figure class="figure col-3">
+        <img src="https://boltgamer.com/wp-content/uploads/2020/08/pexels-xxss-is-back-777001-1024x683.jpg.webp?x38295" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Dual screen is the way to go!
+            <span class="photoTag">
+                <!-- Display tags that belong to the image -->       
+                <a class="photoTagColor text-decoration-none" href="/result/Computer/">
+                    #Computer</a>                    
+            </span>
+        </figcaption>
+    </figure>
+
+    <figure class="figure col-3">
+        <img src="https://www.intelligent.co.uk/storage/app/media/uploaded-files/coffee-shop-with-light-sign-in-alleyway.jpg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Post Covid19 Coffee Time.
+            <span class="photoTag">
+                <!-- Display tags that belong to the image -->
+                <a class="photoTagColor text-decoration-none" href="/result/Coffee/">
+                    #Coffee</a> 
+                <a class="photoTagColor text-decoration-none" href="/result/Food/">
+                    #Food</a>
+            </span>
+        </figcaption>
+    </figure>
+    
+    <figure class="figure col-3">
+        <img src="https://employee-experience-store.com/en/wp-content/uploads/sites/3/pexels-flo-dahm-699459-scaled-e1606832417147.jpg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Late night photoshoot fun :)
+            <span class="photoTag">
+                <!-- Display tags that belong to the image -->
+                <a class="photoTagColor text-decoration-none" href="/result/Computer/">
+                    #Computer</a>
+                <a class="photoTagColor text-decoration-none" href="/result/Onset/">
+                    #Onset</a>
+            </span>
+        </figcaption>
+    </figure>
+    
+    <figure class="figure col-3">
+        <img src="https://miro.medium.com/max/10944/1*3pPbpV5jpowY1iIzDVel0g.jpeg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Live. Breathe. Create.
+            <span class="photoTag">
+                <!-- Display tags that belong to the image -->
+                <a class="photoTagColor text-decoration-none" href="/result/Inspiration/">
+                    #Inspiration
+                </a>
+            </span>
+        </figcaption>
+    </figure>
+    
+    <figure class="figure col-3">
+        <img src="https://miro.medium.com/max/10368/1*SZA5bmN2_VTv_eVBNdz-2A.jpeg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Back in time.
+            <span class="photoTag">
+                <a class="photoTagColor text-decoration-none" href="/result/Museum/">
+                    #Museum</a>
+            </span>
+        </figcaption>
+    </figure>
+    
+    <figure class="figure col-3">
+        <img src="https://miro.medium.com/max/6300/1*r4WfbRe59kPO1is6Kt1fag.jpeg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Starring pineapple
+            <span class="photoTag">
+                <a class="photoTagColor text-decoration-none" href="/result/Food/">
+                    #Food</a>
+                <a class="photoTagColor text-decoration-none" href="/result/Onset/">
+                    #Onset</a>
+            </span>
+        </figcaption>
+    </figure>
+    
+    <figure class="figure col-3">
+        <img src="https://thewebserv.com/wp-content/uploads/2021/03/steam-for-cough-1.jpg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            Feeling a bit hungry.
+            <span class="photoTag">                
+                <a class="photoTagColor text-decoration-none" href="/result/Food/">
+                    #Food</a> 
+            </span>
+        </figcaption>
+    </figure>
+    
+    <figure class="figure col-3">
+        <img src="https://strykerdesign.weebly.com/uploads/1/3/2/5/132513037/dimentional-letters-pflugerville-tx.jpg" class="figure-img img-fluid rounded" alt="">
+        <figcaption class="figure-caption text-right">
+            @STUDIO
+            <span class="photoTag">                
+                <a class="photoTagColor text-decoration-none" href="/result/Inspiration/">
+                    #Inspiration</a>
+                <a class="photoTagColor text-decoration-none" href="/result/Onset/">
+                    #Onset</a>
+            </span>
+        </figcaption>
+    </figure>
+    <!-- Initial demo image ends -->
+
 </div>
 {% endblock %}
 

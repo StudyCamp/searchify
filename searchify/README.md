@@ -33,7 +33,7 @@ Location: searchify/searchify/searchifyApp/tests
 #### URL  
 - Allow direct access to profile and search results pages through URLs (permission required). 
 
-#### Static  
+#### Staticfiles  
 - Images folder contains upload images. 
 - Simulate a cloud service like S3 for demonstration purposes (dev-local).  
 - CSS.  
@@ -43,7 +43,7 @@ Location: searchify/searchify/searchifyApp/tests
 - Mobile Responsive Bootstrap.  
 
 #### Forms  
-- Search, Create, Upload.  
+- Search, Create, Find User, Upload.  
 
 #### Admin  
 - Create superuser and manage DB.  
@@ -53,3 +53,6 @@ Location: searchify/searchify/searchifyApp/tests
 
 #### requirements.txt  
 - Include dependencies.  
+
+#### Introduction Video  
+- https://www.youtube.com/watch?v=NlmfvrSX0b0  

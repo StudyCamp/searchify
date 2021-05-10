@@ -27,7 +27,7 @@ Location: searchify/searchify/searchifyApp/tests
 
 #### Database Relational Model  
 - Tables: User, Post, Tag.  
-- Configure to allow migrations for image URLs relating to the image directory.  
+- Configure migrations to allow customized file storage system
 - SQLite database management system.  
 
 #### URL  
@@ -36,16 +36,17 @@ Location: searchify/searchify/searchifyApp/tests
 #### Static  
 - Images folder contains upload images. 
 - Simulate a cloud service like S3 for demonstration purposes (dev-local).  
-- Mobile responsive CSS.  
+- CSS.  
 
 #### Template  
-- html files, using Django Template Language.  
+- HTML, using Django Template Language.  
+- Mobile Responsive Bootstrap.  
 
 #### Forms  
 - Search, Create, Upload.  
 
-#### Admins  
-- Create superuser and manage db.  
+#### Admin  
+- Create superuser and manage DB.  
 
 #### venv  
 - Utilize virtual environment.  
