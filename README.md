@@ -43,7 +43,7 @@ Location: searchify/searchify/searchifyApp/tests
 - Mobile Responsive Bootstrap.  
 
 #### Forms  
-- Search, Create, Upload.  
+- Search, Create, Find User, Upload.  
 
 #### Admin  
 - Create superuser and manage DB.  
