@@ -8,7 +8,7 @@ This is a backend application developed using Django as a demonstration that all
 
 The Navbar contains all the features below. Start by registering and logging in. Then you may upload, share, and search for images and user profiles. Enjoy!   
 
-### Searchify App  
+### Searchify App - https://searchifynow.herokuapp.com/  
 
 #### Functions  
 Location: searchify/searchifyApp/views.py  
